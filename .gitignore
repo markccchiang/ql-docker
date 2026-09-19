@@ -1,2 +1,5 @@
 # IDE settings
 .idea/
+
+# The virtualenv assets/*/generate.py runs in
+.venv/

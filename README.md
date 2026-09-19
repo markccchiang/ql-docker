@@ -26,11 +26,12 @@ Inside the container, nginx serves the app and the guide on port **8080** and
 passes `/ws/` through to ql-backend. ql-backend listens only on loopback inside
 the container.
 
-```
-browser ──► :8080 nginx ──┬── /          the app (static files)
-                          ├── /doc/      the user's guide
-                          └── /ws/  ───► 127.0.0.1:9111 ql-backend ──► QuantLib
-```
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/architecture/architecture-dark.svg">
+    <img src="assets/architecture/architecture.svg" alt="The browser reaches the container on port 8080, the only published port. Inside, nginx serves the app at / and the user's guide at /doc/, and passes /ws/ over a WebSocket to ql-backend, which listens on 127.0.0.1:9111 only and prices with QuantLib 1.43. Docker's health check asks /ws/healthz.">
+  </picture>
+</p>
 
 ## Run it
 
