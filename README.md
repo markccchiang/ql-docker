@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo/logo-dark.svg">
+    <img src="assets/logo/logo.svg" alt="Interactive QuantLib Service" width="560">
+  </picture>
+</p>
+
 # Interactive QuantLib Service — Docker image
 
 A single Docker image that runs the whole
