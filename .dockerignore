@@ -1,0 +1,3 @@
+# The Dockerfile clones everything it builds from GitHub (or takes it from a
+# --build-context), so nothing in this directory is sent to the builder.
+*
